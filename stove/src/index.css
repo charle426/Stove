@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+:root {
+  font-family: Poppins, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: #323942;
+  background-color: #F7F8F7;
+  --accent: #A8E92F;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+.stickyNav{
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #F7F8F7;
+  transition: all 500ms;
+
+}
+
+.button{
+  background-color: var(--accent);
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+nav{
+  background-color: #F7F8F7;
+}
+
+.navlabel > div{
+  width: 23px;
+  height: 2px;
+  background-color: #323942;
+  border-radius: 30px;
+  transition: 300ms;
+  
+}
+
+nav li,
+footer li{
+  padding: 5px 5px;
+  border-radius: 20px;
+  color: #adadad;
+  font-size: 20px;
+  font-weight: 400;
+ 
+}
+
+
+
+@media (max-width: 1013px){
+  #nav{
+    padding: 12px 20px;
+  }
+}
+@media (max-width: 800px){
+
+  #nav{
+    padding: 8px 12px;
+  }
+}
+
+@media (min-width: 760px){
+
+}
+
+nav li:hover{
+  color: #323942;
+}
+
+.navlink:hover{
+  color: black;
+}
+
+.navtoggle:checked ~ div .navlabel > div{
+  position: absolute;
+  width: 28px;
+  height: 3px;
+  top: 10px; 
+  left: 0;
+  transition: 300ms;
+  /* transform: rotate(30deg); */
+  /* gap: 10px; */
+}
+
+.navtoggle:checked ~ div .navlabel > div:nth-child(2){
+    display: none;
+}
+
+.navtoggle:checked ~ div .navlabel > div:nth-child(1){
+    transform: rotate(-55deg);
+}
+
+.navtoggle:checked ~ div .navlabel > div:nth-child(3){
+    transform: rotate(55deg);
+}
+
+
+.navtoggle:checked ~ .contain-nav > .mobile-nav{
+  transform: translateY(300px);
+  height: 60vh;
+  transition: 500ms;
+}
+
+.timingProgress{
+  animation: heroProgress 6s 1 linear ;
+}
+
+@keyframes heroProgress {
+  from{
+    width: 0;
+  }
+
+  to{
+    width: 100%;
+  }
+}
+@media (max-width: 600px){
+  .heroSelector{
+    background-color: #1111116d;
+    position: absolute;
+    bottom: -15px;
+    padding: 10px 15px;
+    border-radius: 40px;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+  } 
+}
+
+.rotate{
+  animation: rotate 0.5 1 linear;
+}
+
+@keyframes rotate {
+  from{
+    transform: rotate(0);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+.accent{
+  color: var(--accent);
+}
