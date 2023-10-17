@@ -109,8 +109,10 @@ export default function Navbar({activeNav}) {
                         Gasoline Distribution
                       </li>
                     </Link>
-                    <Link to="/delivery
-                    ">
+                    <Link
+                      to="/delivery
+                    "
+                    >
                       <li className="navlink" data-id="logistics">
                         Logistics
                       </li>
@@ -147,14 +149,14 @@ export default function Navbar({activeNav}) {
                 </Link>
               </ul>
               <div>
-                <Link>
+                <a href="https://play.google.com/store/apps/details?id=com.stove.stoveapp">
                   <div
                     data-id="becomeDriver"
                     className="border-dotted border-[2px] navlink rounded-2xl duration-200 text-[20px] text-[#adadad] hover:text-[#323942] border-[#A8E92F] hover:rounded-md hover:px-5 lg:px-6 lg:py-3 md:py-2 md:px-3 "
                   >
                     Become a Driver
                   </div>
-                </Link>
+                </a>
               </div>
             </div>
           </div>

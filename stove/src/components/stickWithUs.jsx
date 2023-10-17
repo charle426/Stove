@@ -42,19 +42,19 @@ export default function StickWithUS(){
             <div className="grid place-items-center h-[60px] rounded-full w-[60px] border-[2px] border-solid border-[#a8e92f] ">
               <FontAwesomeIcon icon={faThumbsUp} />
             </div>
-            <h3 className="font-semibold text-[22px]">Prices are fair</h3>
+            <h3 className="font-semibold text-[22px]">Client Satisfaction</h3>
             <div>
               <p>
-                We agree on a win-win price for both sides. Fair pay would
-                always inspire the best of the services for you
+                At stove we take our clients satisfaction seriously.From product
+                order to delivery we put you first.
               </p>
             </div>
           </div>
         </div>
-        <div className="">
+        <div>
           <a
             href="https://play.google.com/store/apps/details?id=com.stove.stoveapp"
-            className="button px-5 py-3 md:px-10 md:py-4 text-lg overflow-hidden"
+            className="button px-5 py-3 block mb-3 md:px-10 md:py-4 text-lg overflow-hidden"
           >
             Download the app
           </a>

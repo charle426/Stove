@@ -47,7 +47,7 @@ nav{
   background-color: #323942;
   border-radius: 30px;
   transition: 300ms;
-  
+  pointer-events: ;
 }
 
 nav li,

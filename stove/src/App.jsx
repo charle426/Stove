@@ -11,6 +11,8 @@ import ServicesPage from "./pages/servicesPage"
 import Refill from "./pages/RefillPage"
 import Logistics from "./pages/logisticsPage"
 import Cargo from "./pages/frieghtPage"
+import ErrorPage from "./Error"
+import Contact from "./Contact"
 
 export default function App() {
     const [active, setActive] = React.useState("home")
@@ -18,7 +20,7 @@ export default function App() {
       <Router>
         <Navbar activeNav={active} />
         <Routes>
-          <Route path="/" element={<Homepage setActiveNav={setActive} />} />
+          <Route exact path="/" element={<Homepage setActiveNav={setActive} />} errorElement={<ErrorPage/>} />
           <Route
             path="/services"
             element={<ServicesPage setActiveNav={setActive} />}
@@ -31,6 +33,10 @@ export default function App() {
           <Route
             path="/cargo"
             element={<Cargo setActiveNav={setActive} />}
+          />
+          <Route
+            path="/contact"
+            element={<Contact setActiveNav={setActive} />}
           />
         </Routes>
         <Footer />
