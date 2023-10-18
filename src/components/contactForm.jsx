@@ -8,6 +8,7 @@ export default function ContactForm() {
     const [mail, setMail] = React.useState({
         name: "", email: "", message: "",
     })
+  const [fillForm, setFillForm] = React.useState(false)
 
     function handleChange(e) {
         const {value, name} = e.target
@@ -15,10 +16,22 @@ export default function ContactForm() {
     }
 
     function handleSubmit(e) {
-        e.preventDefault()
-        mail.name = ""
-        mail.email = ""
-        mail.message = ""
+      e.preventDefault()
+      if (!mail.name && !mail.email && !mail.message)
+      {
+        setFillForm(true)
+        setTimeout(() => {
+          setFillForm(false)
+        }, 3000);
+        return false
+      }
+      setMail({
+        name : "",
+        email : "",
+        message : ""
+      }  
+      )
+       
         // emailjs.sendForm("service_id", "template_id", e.target, "public_key")
         document.getElementById("submitBtn").textContent = "Sending"
         document.getElementById("submitBtn").style.userSelect = "none"
@@ -27,7 +40,8 @@ export default function ContactForm() {
         setTimeout(() => {
             document.getElementById("submitBtn").textContent = "Send";
             document.getElementById("submitBtn").style.userSelect = "all";
-            document.getElementById("submitBtn").style.pointerEvents = "1";
+          document.getElementById("submitBtn").style.pointerEvents = "all";
+          document.getElementById("submitBtn").style.opacity = "1";
         }, 5000);
     }
     
@@ -73,6 +87,7 @@ export default function ContactForm() {
             encType="text/plain"
             method="post"
             onSubmit={handleSubmit}
+            className="w-full"
           >
             <div className="flex flex-col gap-4 items-start w-full">
               <div className="w-full">
@@ -82,7 +97,7 @@ export default function ContactForm() {
                   name="name"
                   value={mail.name}
                   onChange={handleChange}
-                  className="outline-none rounded-[10px] px-2 py-3 max-w-[350px] bg-white border border-[#323942] focus:border-[#a8e92f] w-full"
+                  className="outline-none rounded-[10px] px-2 py-3 max-w-[350px] bg-white border border-[#323942] focus:border-[#a8e92f]  invalid:border-red-500 w-full"
                 />
               </div>
               <div className="w-full">
@@ -92,7 +107,7 @@ export default function ContactForm() {
                   name="email"
                   value={mail.email}
                   onChange={handleChange}
-                  className="outline-none rounded-[10px] px-2 py-3 max-w-[350px] bg-white border border-[#323942] focus:border-[#a8e92f] w-full"
+                  className="outline-none rounded-[10px] px-2 py-3 max-w-[350px] bg-white border border-[#323942] focus:border-[#a8e92f] invalid:border-red-500 w-full"
                 />
               </div>
               <div className="max-h-[100px] min-h-[100px] w-full ">
@@ -101,11 +116,12 @@ export default function ContactForm() {
                   name="message"
                   value={mail.message}
                   onChange={handleChange}
-                  className="min-h-[100px] select-none max-h-[100px] outline-none rounded-[10px] px-2 py-3 max-w-[350px] bg-white border border-[#323942] focus:border-[#a8e92f] w-full"
+                  className="min-h-[100px] select-none max-h-[100px] outline-none rounded-[10px] px-2 py-3 max-w-[350px] bg-white border  invalid:border-red-500 border-[#323942] focus:border-[#a8e92f] w-full"
                 ></textarea>
               </div>
             </div>
             <div>
+              {fillForm && <p className="text-red-500 mt-2">fill form correctly</p>}
               <button
                 type="submit"
                 className="bg-[#a8e92f] px-4 mt-3 rounded-lg py-2"

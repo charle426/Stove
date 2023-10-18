@@ -4,8 +4,6 @@ import img3 from "../assets/IMG-20230929-WA0012.jpg"
 import React from "react"
 export default function HomeHero() {
   const [Bg, setbG] = React.useState(0)   
-  let interval;
-  let timing = 6000
     const heroSlide = [
         {
             src: img1
@@ -20,8 +18,23 @@ export default function HomeHero() {
     const style = {
       backgroundImage: `linear-gradient(to right, #000000b8 30%, transparent), url(${heroSlide[Bg].src})`,
   };
+
+  const slideLength = heroSlide.length - 1;
+
+  React.useEffect(() => {
+  setTimeout(() => {
+        setbG((prev) => (prev >= slideLength ? (prev = 0) : prev + 1));
+      }, 6000);
+  },[Bg, slideLength])
+
+  // function ChangSlide(){
+  //      setTimeout(() => {
+  //        setbG((prev) => (prev >= slideLength ? (prev = 0) : prev + 1));
+  //      }, 6000);
+  // }
    
     function impact() {
+          
         if (Bg === 0)
         {
              return ( 
@@ -62,24 +75,10 @@ export default function HomeHero() {
 
   })
 
-  
-  function toggleHero() {
-      // const check = Bg >= heroSlide.length - 1 ? 0 : Bg + 1;
-      setbG((prev) => prev >= heroSlide.length - 1 ? prev = 0 : prev + 1);
-  }
-
-  window.onload = function () {
-    interval = setInterval(toggleHero, timing);
-  }
-
-   
 
     function resetInterval(n) {
-      clearInterval(interval);
-      window.clearInterval(interval)
       setbG(n);
-      timing = 6000
-      setTimeout(interval, timing);
+      
     }
 
  

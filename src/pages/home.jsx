@@ -7,7 +7,8 @@ import HomeHero from "../components/homehero";
 import SafetyFirst from "../components/safetyFirst";
 import StickWithUS from "../components/stickWithUs";
 
-export default function Homepage ({set}) {
+export default function Homepage({ setActiveNav }) {
+    setActiveNav("home")
     return (
         <>
             <HomeHero />

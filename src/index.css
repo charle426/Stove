@@ -12,6 +12,7 @@
   color-scheme: light dark;
   color: #323942;
   background-color: #F7F8F7;
+  position: relative;
   --accent: #A8E92F;
 
   font-synthesis: none;
@@ -19,6 +20,10 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+body{
+  position: relative;
 }
 
 .stickyNav{
@@ -47,7 +52,6 @@ nav{
   background-color: #323942;
   border-radius: 30px;
   transition: 300ms;
-  pointer-events: ;
 }
 
 nav li,
@@ -152,6 +156,18 @@ nav li:hover{
   }
   to{
     transform: rotate(360deg);
+  }
+}
+.loads{
+  animation: load 0.5 1 linear;
+}
+
+@keyframes load {
+  from{
+    width: 50%;
+  }
+  to{
+    width: 0%;
   }
 }
 

@@ -9,27 +9,38 @@ export default function Navbar({activeNav}) {
   // console.log(navlinks)
   navlinks.forEach((nav) => {
       // console.log(nav.dataset.id)
-        if (nav.dataset.id === activeNav)
+        if (nav.dataset.id !== activeNav)
+        {
+          nav.style.color = "#adadad"
+        }
+        
+        else
         {
           nav.style.color = "black"
-        } else
-        {
-           nav.style.color = "#adadad"
-    }
-    
-    if (activeNav === "blog" || activeNav === "contact")
-    {
-        document.querySelector(".containNav2").style.color = "black"
-        } else if (activeNav === "refill" || activeNav === "logistics" || activeNav === "cargo")
-        {
-          document.querySelector(".containNav").style.color = "black"
-      }
-  })
+          
+          }
+          
+        })
+        
   
   React.useEffect(() => {
         window.scrollTo(0, 0)
-        setNavCheck(false)
-    }, [pathname])
+    setNavCheck(false)
+    if (
+      activeNav === "refill" ||
+      activeNav === "logistics" ||
+      activeNav === "cargo"
+    ) {
+      document.querySelector(".containNav").style.color = "black";
+      document.querySelector(".containNav2").style.color = "#adadad";
+    } else if (activeNav === "blog" || activeNav === "contact") {
+      document.querySelector(".containNav2").style.color = "black";
+      document.querySelector(".containNav").style.color = "#adadad";
+    } else {
+      document.querySelector(".containNav2").style.color = "#adadad";
+      document.querySelector(".containNav").style.color = "#adadad";
+    }
+    }, [pathname, activeNav])
   let prevNavScroll = window.scrollY
   function scrollFunction() {
     const currentNavScroll = window.scrollY;
