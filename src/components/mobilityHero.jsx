@@ -5,10 +5,10 @@ export default function MobilityHero({text, empha}) {
     backgroundImage: `linear-gradient(to right, #1111116d 30%, transparent), url(${bg})`,
   };
   return (
-    <section className="md:px-10 md:pb-10 px-5 pb-2">
+    <section className="md:px-10 md:pb-10 px-3 pb-2">
       <div
         style={style}
-        className="bg-cover relative md:py-8 md:px-10 p-5 bg-left-top min-h-[65vh] duration-500 w-full md:h-[85vh] h-[85vh] rounded-[50px] flex justify-start items-end"
+        className="bg-cover relative md:py-8 md:px-10 p-5 bg-left-top min-h-[70vh] duration-500 w-full md:h-[85vh] h-[85vh] rounded-[50px] flex justify-start items-end"
       >
         <div className="flex md:flex-row flex-col justify-between w-full gap-10 items-start md:items-end">
           <h1 className="md:text-[70px] text-white text-[55px] font-semibold p-0 m-0">
@@ -23,7 +23,7 @@ export default function MobilityHero({text, empha}) {
               </div>
             </div>
             <a href="https://play.google.com/store/apps/details?id=com.stove.stoveapp"
-                className="button w-[300px] py-3 text-center mb-5">
+                className="button md:w-[300px] w-[80%] py-3 text-center mb-5">
               Download app
            </a>
           </div>

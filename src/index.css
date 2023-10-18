@@ -83,7 +83,7 @@ footer li{
 }
 
 nav li:hover{
-  color: #323942;
+  color: black;
 }
 
 .navlink:hover{
@@ -115,9 +115,13 @@ nav li:hover{
 
 
 .navtoggle:checked ~ .contain-nav > .mobile-nav{
-  transform: translateY(300px);
-  height: 60vh;
+  height: 80vh;
+  width: 95%;
+  top: 50px;
+  left: 10px;
+  overflow: hidden;
   transition: 500ms;
+  opacity: 1;
 }
 
 .timingProgress{

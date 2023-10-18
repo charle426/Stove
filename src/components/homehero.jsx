@@ -84,10 +84,10 @@ export default function HomeHero() {
  
     
     return (
-      <section className="px-3 md:px-5 mb-5 ">
+      <section className="px-3 md:px-5 mb-5 py-5 w-full overflow-hidden">
         <div
           style={style}
-          className="bg-cover relative py-16 md:px-16 px-5 bg-left-top max-h-[65vh] duration-500 md:h-[85vh] h-[89vh] rounded-[50px] hero"
+          className="bg-cover relative py-5 flex flex-col items-start justify-center md:px-16 md:py-16 px-5 bg-left-top min-h-[65vh] duration-500 md:h-[85vh] h-[60vh] rounded-[50px] hero"
         >
           <div className="flex items-center gap-6 w-full heroSelector">
             <div
@@ -118,9 +118,9 @@ export default function HomeHero() {
               </div>
             </div>
           </div>
-          <div>
+          <div className="flex flex-col items-start justify-center">
             {impact()}
-            <div className="md:mt-5 mt-1">
+            <div className="md:mt-5 mt-3">
               <a
                 href="https://play.google.com/store/apps/details?id=com.stove.stoveapp"
                 className="button px-3 py-2 md:px-10 md:py-4 text-lg overflow-hidden"

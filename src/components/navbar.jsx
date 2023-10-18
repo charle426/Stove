@@ -74,7 +74,7 @@ export default function Navbar({activeNav}) {
         <nav
           id="nav"
           ref={ref}
-          className="relative duration-500 py-2 md:px-2 lg:px-10 px-5 md:py-2 z-[999] flex justify-between flex-row-reverse w-full items-center"
+          className="relative duration-500 py-2 md:px-2 lg:px-10 px-5 md:py-5 z-[999] flex justify-between flex-row-reverse w-full items-center"
         >
           <input
             type="checkbox"
@@ -105,7 +105,7 @@ export default function Navbar({activeNav}) {
                 </h3>
               </Link>
             </div>
-            <div className="mobile-nav flex md:flex-row flex-col md:w-full w-[95%] rounded-2xl duration-500 justify-between md:relative md:bg-[#f7f8f7] md:translate-y-[0] translate-y-[-100%] py-5 px-2 md:px-0 lg:px-2 bg-white absolute items-start md:items-center gap-1">
+            <div className="mobile-nav flex md:opacity-100 md:flex-row flex-col md:w-full w-[0] rounded-2xl duration-500 md:justify-between justify-normal md:relative md:bg-[#f7f8f7] h-0 md:overflow-visible overflow-hidden py-5 px-2 md:px-0 lg:px-2 opacity-0 bg-white absolute items-start md:items-center gap-1">
               <ul className="list-none flex md:flex-row flex-col md:items-center items-start md:gap-1 gap-2">
                 <Link to="/">
                   <li className="navlink" data-id="home">
@@ -163,7 +163,7 @@ export default function Navbar({activeNav}) {
                 <a href="https://play.google.com/store/apps/details?id=com.stove.stoveapp">
                   <div
                     data-id="becomeDriver"
-                    className="border-dotted border-[2px] navlink rounded-2xl duration-200 text-[20px] text-[#adadad] hover:text-[#323942] border-[#A8E92F] hover:rounded-md hover:px-5 lg:px-6 lg:py-3 md:py-2 md:px-3 "
+                    className="border-dotted border-[2px] navlink rounded-2xl duration-200 text-[20px] text-[#adadad] hover:text-[#323942] border-[#A8E92F] hover:rounded-md hover:px-5 lg:px-6 lg:py-3 py-2 px-3 "
                   >
                     Become a Driver
                   </div>
