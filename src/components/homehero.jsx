@@ -44,7 +44,7 @@ export default function HomeHero() {
         )
         }else if (Bg === 1){
             return (
-              <h1 className="md:text-[50px] max-w-[550px] w-full text-[30px] mt-7 text-white">
+              <h1 className="md:text-[50px] max-w-[550px] w-full text-[30px] md:mt-7 mt-0 text-white">
                 Trusted specialist for our tasks at a
                 <span className="text-[#a8e92f]"> fair price</span>
               </h1>
@@ -84,10 +84,10 @@ export default function HomeHero() {
  
     
     return (
-      <section className=" px-5 mb-5 ">
+      <section className="px-3 md:px-5 mb-5 ">
         <div
           style={style}
-          className="bg-cover relative py-16 px-16 bg-left-top min-h-[55vh] duration-500 md:h-[85vh] h-[55vh] rounded-[50px] hero"
+          className="bg-cover relative py-16 md:px-16 px-5 bg-left-top max-h-[65vh] duration-500 md:h-[85vh] h-[89vh] rounded-[50px] hero"
         >
           <div className="flex items-center gap-6 w-full heroSelector">
             <div
@@ -120,10 +120,10 @@ export default function HomeHero() {
           </div>
           <div>
             {impact()}
-            <div className="mt-5">
+            <div className="md:mt-5 mt-1">
               <a
                 href="https://play.google.com/store/apps/details?id=com.stove.stoveapp"
-                className="button px-5 py-3 md:px-10 md:py-4 text-lg overflow-hidden"
+                className="button px-3 py-2 md:px-10 md:py-4 text-lg overflow-hidden"
               >
                 Download the app
               </a>
