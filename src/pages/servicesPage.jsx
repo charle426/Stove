@@ -1,3 +1,5 @@
+import Cities from "../components/cities";
+import ImpactTab from "../components/impactTab";
 import ServiceDownload from "../components/serviceDownload";
 import ServiceStickWithUS from "../components/serviceStickwithUS";
 import ServicesHero from "../components/servicesHero";
@@ -8,7 +10,9 @@ export default function ServicesPage({ setActiveNav }) {
     return (
         <>
             <ServicesHero />
-            <ServicesSpecialists/>
+            <ServicesSpecialists />
+            <ImpactTab/>
+            <Cities/>
             < ServiceStickWithUS />
             <ServiceDownload/>
         </>

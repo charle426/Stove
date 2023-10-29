@@ -12,7 +12,7 @@ export default function Refill({setActiveNav}) {
       <>
         <MobilityHero text="A Stove you can" empha="trust" />
         <section className="md:px-10 px-5 py-5">
-          <h2 className="md:text-[70px] mb-7 text-[50px] font-semibold">
+          <h2 className="md:text-[70px] mb-7 text-[40px] font-semibold">
             Our coast to coast gasoline delivery network is expanding daily
           </h2>
           <MobilityCounter />

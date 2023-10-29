@@ -4,7 +4,7 @@ import facebook from "../assets/facebook-white.svg";
 import twitter from "../assets/twitter-white.svg";
 import play from "../assets/play_market.webp";
 import apple from "../assets/app_store.webp";
-import brandsign from "../assets/brandsign.svg";
+import Logo from "./logo";
 // import {motion} from "framer-motion"
 
 export default function Footer() {
@@ -12,15 +12,7 @@ export default function Footer() {
       <footer className="bg-[#1A1A1A] rounded-t-[50px] py-2 md:px-2 flex flex-col items-start lg:px-10 px-5 md:py-7 text-[#f7f8f7] min-h-[80vh] h-fit">
         <div className="flex md:flex-row flex-col md:gap-[150px] flex-wrap ">
           <div>
-            <Link to="/" className="flex md:flex-row flex-col gap-10">
-              <h3 className="uppercase flex items-center gap-2 lg:gap-2 md:gap-1 w-full md:text-[30px] px-1 text-[23px] font-semibold">
-                stove
-                <span className="w-full relative z-10">
-                  <div className="absolute h-2 w-[35px] bottom-[10px] -z-10 rounded-full bg-[#a8e92f]"></div>
-                  app
-                </span>
-              </h3>
-            </Link>
+            <Logo/>
           </div>
           <div className="flex md:flex-row flex-col gap-10">
             <ul className="list-none flex flex-col gap-2 items-start">
@@ -49,7 +41,7 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className="flex md:flex-row flex-col justify-between mt-9 items-end md:w-full">
+        <div className="flex md:flex-row flex-col mt-9 md:w-full">
           <div className="flex flex-col gap-8 items-start">
             <div className="flex items-center gap-2">
               <div>
@@ -97,9 +89,6 @@ export default function Footer() {
               </span>
               from Stove Technologies
             </p>
-          </div>
-          <div>
-            <img src={brandsign} width="100%" />
           </div>
         </div>
       </footer>

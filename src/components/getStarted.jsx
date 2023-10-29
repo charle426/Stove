@@ -3,7 +3,7 @@ import { faCartPlus, faFireFlameCurved } from "@fortawesome/free-solid-svg-icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export default function GetStarted() {
   return (
-    <section className=" p-5 md:p-10">
+    <section className=" py-5 px-2 md:p-10">
       <div className="bg-[#323942] rounded-[50px] p-5 md:p-10 flex flex-col gap-4 items-start text-white">
         <h2 className="text-[60px] font-semibold">Get Started today</h2>
         <div className="flex items-center lg:flex-row flex-col gap-5 py-10">

@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, useLocation } from "react-router-dom"
+import Logo from "./logo"
 export default function Navbar({activeNav}) {
     const [navcheck, setNavCheck] = React.useState(false)
     // const nav = document.getElementById("nav")
@@ -95,15 +96,7 @@ export default function Navbar({activeNav}) {
           </div>
           <div className="flex lg:gap-7 md:gap-2 items-center w-full contain-nav">
             <div className="">
-              <Link to="/">
-                <h3 className="uppercase flex items-center gap-2 lg:gap-2 md:gap-1 w-full md:text-[30px] px-1 text-[23px] font-semibold">
-                  stove
-                  <span className="w-full relative z-10">
-                    <div className="absolute h-2 w-full bottom-[10px] -z-10 rounded-full bg-[#a8e92f]"></div>
-                    app
-                  </span>
-                </h3>
-              </Link>
+             <Logo/>
             </div>
             <div className="mobile-nav flex md:opacity-100 md:flex-row flex-col md:w-full w-[0] rounded-2xl duration-500 md:justify-between justify-normal md:relative md:bg-[#f7f8f7] h-0 md:overflow-visible overflow-hidden py-5 px-2 md:px-0 lg:px-2 opacity-0 bg-white absolute items-start md:items-center gap-1">
               <ul className="list-none flex md:flex-row flex-col md:items-center items-start md:gap-1 gap-2">
@@ -156,6 +149,14 @@ export default function Navbar({activeNav}) {
                     data-id="services"
                   >
                     <span className="lg:block hidden">Stove</span> Services
+                  </li>
+                </Link>
+                <Link to="/career">
+                  <li
+                    className="flex items-center gap-1 navlink"
+                    data-id="career"
+                  >
+                    Career
                   </li>
                 </Link>
               </ul>

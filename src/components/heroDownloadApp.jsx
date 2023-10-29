@@ -1,22 +1,16 @@
 import stars from "../assets/star-yellow.svg";
 import downloadpic from "../assets/mobile_app.webp";
+import Logo from "./logo.jsx"
 export default function HeroDownloadApp() {
     return (
       <section className="px-5 md:px-10 py-10">
         <div className="bg-white flex md:flex-row h-fit flex-col-reverse items-center rounded-[50px] px-5">
           <div className="flex flex-col items-start gap-6">
-            <div className="flex items-start gap-2">
+            <div className="flex flex-col items-start gap-2">
               <div>
-                <h3 className="uppercase flex items-center gap-2 lg:gap-2 md:gap-1 w-full md:text-[30px] px-1 text-[23px] font-semibold">
-                  stove
-                  <span className="w-full relative z-10">
-                    <div className="absolute h-2 w-full bottom-[10px] -z-10 rounded-full bg-[#a8e92f]"></div>{" "}
-                    app
-                  </span>
-                </h3>
+               <Logo/>
               </div>
               <div>
-                <p className="text-[16px]">Stove app</p>
                 <div className="flex items-center gap-1">
                   <img src={stars} width="100%" />
                   <img src={stars} width="100%" />

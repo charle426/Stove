@@ -9,29 +9,32 @@ export default function HomeMobility() {
        };
     return (
       <section className="px-5 py-5">
-        <div className="bg-[#272B33] rounded-[50px] p-5">
+        <div className="bg-[#272B33] rounded-[50px] md:p-5 px-3 py-5">
           <div
             style={style}
             className="px-5 mb-2 rounded-[50px] py-5 flex flex-col justify-end items-start md:min-h-[55vh] max-h-[45vh] bg-cover h-[75vh]"
           >
-            <div className="rounded-lg py-2 px-3 bg-white mb-1">Mobility</div>
+            <div className="rounded-lg py-2 px-3 bg-white mb-1">services</div>
             <h1 className="md:text-[50px] text-[40px] text-white">
-              Stove Mobility
+              Stove services
             </h1>
           </div>
           <div>
             <h3 className="text-white text-[20px] mb-1">
-              Ride or drive, shop or delivery, send or receive - one app for all
-              fair deals
+              Ride or drive, shop or delivery, send or receive - one app for
+              all...
             </h3>
-            <div className="flex md:flex-row md:flex-nowrap flex-wrap justify-around items-center gap-5">
-              <div className="bg-[#2F353F] hover:bg-[#3A424E] md:flex-col flex-row-reverse flex text-white p-5 duration-200 rounded-[20px]">
-                <div>
-                  <img src={gasoline} width="90%" className="max-w-[275px]" />
+            <div className="flex md:flex-row md:flex-nowrap mt-4 flex-wrap justify-around items-center gap-5">
+              <div className="bg-[#2F353F] w-full hover:bg-[#3A424E] md:flex-col max-h-[450px] md:h-[480px] justify-between items-center flex-row-reverse flex text-white p-3 md:p-5 duration-200 rounded-[20px]">
+                <div className="w-full flex justify-center items-center">
+                  <img src={gasoline} width="210px" className="max-w-[250px]" />
                 </div>
-                <div>
-                  <h1 className="text-[30px]">Gasoline Distribution</h1>
-                  <p>Get all your gasoline products for your price</p>
+                <div className="w-full">
+                  <h1 className="text-[25px] sm:text-[30px]">Gas Distribution</h1>
+                  <p className="max-w-[300px]">
+                    Get all your gasoline products
+                     for your price
+                  </p>
                   <div className="text-[#3d74ff] mt-3 underline text-[18px] font-medium">
                     <Link to="/refill" className="py-2">
                       know more
@@ -39,13 +42,16 @@ export default function HomeMobility() {
                   </div>
                 </div>
               </div>
-              <div className="bg-[#2F353F] hover:bg-[#3A424E] md:flex-col flex-row-reverse flex text-white p-5 duration-200 rounded-[20px]">
-                <div>
-                  <img src={frieght} width="90%" />
+              <div className="bg-[#2F353F] w-full hover:bg-[#3A424E] md:flex-col max-h-[450px] md:h-[480px] justify-between items-center flex-row-reverse flex text-white p-3 md:p-5 duration-200 rounded-[20px]">
+                <div className="w-full flex justify-center items-center">
+                  <img src={frieght} width="250px" />
                 </div>
-                <div>
-                  <h1 className="text-[30px]">Freight Delivery</h1>
-                  <p>Cargo importation fro your price</p>
+                <div className="w-full">
+                  <h1 className="text-[25px] sm:text-[30px]">Freight Delivery</h1>
+                  <p className="max-w-[300px]">
+                    Cargo export and import,
+                    air, sea and groupage at a fair price
+                  </p>
                   <div className="text-[#3d74ff] mt-3 underline text-[18px] font-medium">
                     <Link to="/refill" className="py-2">
                       know more
@@ -53,13 +59,16 @@ export default function HomeMobility() {
                   </div>
                 </div>
               </div>
-              <div className="bg-[#2F353F] hover:bg-[#3A424E] md:flex-col flex-row-reverse flex text-white p-5 duration-200 rounded-[20px]">
-                <div>
-                  <img src={logistics} width="90%" />
+              <div className="bg-[#2F353F] w-full hover:bg-[#3A424E] md:flex-col max-h-[450px] md:h-[480px] justify-between items-center flex-row-reverse flex text-white p-3 md:p-5 duration-200 rounded-[20px]">
+                <div className="w-full flex justify-center items-center">
+                  <img src={logistics} width="250px" />
                 </div>
-                <div>
-                  <h1 className="text-[30px]">Logistics Delivery</h1>
-                  <p>Choose a courier for your price</p>
+                <div className="w-full">
+                  <h1 className="text-[25px] sm:text-[30px]">Logistics Delivery</h1>
+                  <p className="max-w-[300px]">
+                    Choose a courier for and get packages delivered anywhere
+                     your price
+                  </p>
                   <div className="text-[#3d74ff] mt-3 underline text-[18px] font-medium">
                     <Link to="/refill" className="py-2">
                       know more

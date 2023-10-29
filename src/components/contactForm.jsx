@@ -17,7 +17,7 @@ export default function ContactForm() {
 
     function handleSubmit(e) {
       e.preventDefault()
-      if (!mail.name && !mail.email && !mail.message)
+      if (mail.name === "" || mail.email === "" || mail.message === "")
       {
         setFillForm(true)
         setTimeout(() => {

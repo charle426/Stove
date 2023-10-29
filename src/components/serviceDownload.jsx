@@ -5,7 +5,7 @@ export default function ServiceDownload(){
       <section className="md:px-10 p-2 my-20">
         <div className="bg-[#323942] rounded-[50px] flex flex-col md:flex-row  px-5 py-5 items-center h-fit gap-5 lg:h-[400px] justify-between">
           <div>
-            <h1 className="text-white text-[60px]">
+            <h1 className="text-white md:text-[60px] text-[40px]">
               Download our free <span className="text-[#a8e92f]">app</span>
             </h1>
             <p className="text-white text-[17px] md:w-[80%] w-full mb-2">
@@ -17,7 +17,7 @@ export default function ServiceDownload(){
             <div>
               <a
                 href="https://play.google.com/store/apps/details?id=com.stove.stoveapp"
-                className="button block w-[220px] px-5 py-3 md:px-10 md:py-4 text-lg overflow-hidden"
+                className="button block w-[220px] px-5 py-3 md:px-6 text-lg overflow-hidden"
               >
                 Download the app
               </a>

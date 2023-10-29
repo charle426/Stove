@@ -26,6 +26,12 @@ body{
   position: relative;
 }
 
+@media (max-width: 500px){
+  h2{
+    font-size: 45px;
+  }
+}
+
 .stickyNav{
   position: sticky;
   top: 0;
@@ -166,15 +172,12 @@ nav li:hover{
   animation: load 0.5 1 linear;
 }
 
-@keyframes load {
-  from{
-    width: 50%;
-  }
-  to{
-    width: 0%;
-  }
-}
-
 .accent{
   color: var(--accent);
+}
+
+.auto-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }

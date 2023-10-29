@@ -21,11 +21,7 @@ export default function HomeHero() {
 
   const slideLength = heroSlide.length - 1;
 
-  React.useEffect(() => {
-  setTimeout(() => {
-        setbG((prev) => (prev >= slideLength ? (prev = 0) : prev + 1));
-      }, 6000);
-  },[Bg, slideLength])
+
 
   // function ChangSlide(){
   //      setTimeout(() => {
@@ -45,8 +41,8 @@ export default function HomeHero() {
         }else if (Bg === 1){
             return (
               <h1 className="md:text-[50px] max-w-[550px] w-full text-[30px] md:mt-7 mt-0 text-white">
-                Trusted specialist for our tasks at a
-                <span className="text-[#a8e92f]"> fair price</span>
+                Verified vendors at your best
+                <span className="text-[#a8e92f]"> convenience</span>
               </h1>
             );
                 
@@ -54,8 +50,8 @@ export default function HomeHero() {
         {
             return (
               <h1 className="md:text-[50px] max-w-[550px] w-full text-[30px] text-white">
-                No more heavy lifting get all your gasoline products at 
-                <span className="text-[#a8e92f]"> your convenience</span>
+                A blue ocen impact driven for a healthy
+                <span className="text-[#a8e92f]"> ocean life</span>
               </h1>
             );
         }
@@ -80,6 +76,12 @@ export default function HomeHero() {
       setbG(n);
       
     }
+
+      React.useEffect(() => {
+        setTimeout(() => {
+          setbG((prev) => (prev >= slideLength ? (prev = 0) : prev + 1));
+        }, 6000);
+      }, [Bg, slideLength]);
 
  
     

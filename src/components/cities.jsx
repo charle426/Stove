@@ -9,8 +9,7 @@ export default function Cities() {
           <div>
             <div className="relative mb-[30px]">
               <h1 className="md:text-[60px] w-full text-[40px] relative z-10 font-medium md:w-[85%]">
-                Challenging injustice to make the world a fairer place for 1
-                billion+ People
+                Promoting blue ocean impact drive for better ocean life for 1 billion people
               </h1>
               <img
                 src={homeVector}
@@ -22,19 +21,19 @@ export default function Cities() {
             <div className="flex gap-4 items-start">
               <div className="py-4 border-t-[2px] border-[#a8e92f] border-solid w-full">
                 <h1 className="md:text-[80px] font-semibold text-[60px] mb-4">
-                  <AnimatedCounter from={0} to={155} fontFamily="poppins" color={"#323942"} />
+                  <AnimatedCounter from={0} to={100} fontFamily="poppins" color={"#323942"} />
                 </h1>
                 <p>cities</p>
               </div>
               <div className="py-4 border-t-[2px] border-[#a8e92f] border-solid w-full">
                 <h1 className="md:text-[80px] font-semibold text-[60px] mb-4">
-                  <AnimatedCounter from={0} to={8} fontFamily="poppins" color={"#323942"} />
+                  <AnimatedCounter from={0} to={1} fontFamily="poppins" color={"#323942"} />
                 </h1>
                 <p>countries</p>
               </div>
               <div className="py-4 border-t-[2px] border-[#a8e92f] border-solid w-full">
                 <h1 className="md:text-[80px] font-semibold text-[60px] mb-4">
-                  <AnimatedCounter from={0} to={17} fontFamily="poppins" color={"#323942"} />
+                  <AnimatedCounter from={0} to={10} fontFamily="poppins" color={"#323942"} />
                 </h1>
                 <p>thousand deliveries</p>
               </div>
