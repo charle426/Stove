@@ -1,5 +1,9 @@
 import bg from "../assets/IMG-20230929-WA0010.jpg";
-
+import CareerServices from "../components/CareerServices";
+import StepsCareer from "../components/StepsCareer";
+import TeamCareer from "../components/TeammCareer";
+import AccelerateCareer from "../components/accelerateCareer";
+import Cities from "../components/cities"
 export default function Career({ setActiveNav }) {
 
      setActiveNav("career")
@@ -19,6 +23,11 @@ export default function Career({ setActiveNav }) {
             </h1>
           </div>
         </section>
+        <Cities />
+        <CareerServices/>
+        <AccelerateCareer />
+        <TeamCareer/>
+        <StepsCareer/>
       </>
     );
 }
