@@ -12,11 +12,13 @@ export default function Footer() {
       <footer className="bg-[#1A1A1A] rounded-t-[50px] py-2 md:px-2 flex flex-col items-start lg:px-10 px-5 md:py-7 text-[#f7f8f7] min-h-[80vh] h-fit">
         <div className="flex md:flex-row flex-col md:gap-[150px] flex-wrap ">
           <div>
-            <Logo/>
+            <Logo />
           </div>
           <div className="flex md:flex-row flex-col gap-10">
             <ul className="list-none flex flex-col gap-2 items-start">
-              <h2 className="md:text-[18px] mb-3">Stove Mobility</h2>
+              <h2 className="md:text-[18px] font-semibold text-[15px] mb-3">
+                Stove Mobility
+              </h2>
               <Link to="/refill">
                 <li>Gasoline Distribution</li>
               </Link>
@@ -28,7 +30,9 @@ export default function Footer() {
               </Link>
             </ul>
             <ul className="list-none flex flex-col gap-2 items-start">
-              <h2 className="md:text-[18px] mb-3">About Us</h2>
+              <h2 className="md:text-[18px] font-semibold text-[15px] mb-3">
+                About Us
+              </h2>
               <Link to="/contact">
                 <li>Contacts</li>
               </Link>

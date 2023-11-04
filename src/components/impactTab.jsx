@@ -25,7 +25,7 @@ export default function ImpactTab() {
              From pact to act
             </h3>
             <div className="auto-grid justify-around items-start gap-5 mt-4">
-              <div className="bg-[#2F353F] w-full hover:bg-[#3A424E] justify-between sm:flex-col flex-row-reverse flex text-white py-5 px-3 max-h-[520px] h-full duration-200 rounded-[20px]">
+              <div className="bg-[#2F353F] impactTab w-full hover:bg-[#3A424E] justify-between sm:flex-col flex-row-reverse flex text-white py-5 px-3 max-h-[520px] sm:h-full duration-200 rounded-[20px]">
                 <div className="w-full flex justify-center items-center">
                   <img src={planetCare} width="220px" className="max-w-[245px]" />
                 </div>
@@ -41,7 +41,7 @@ export default function ImpactTab() {
                   </div>
                 </div>
               </div>
-              <div className="bg-[#2F353F] w-full hover:bg-[#3A424E] justify-between sm:flex-col flex-row-reverse flex text-white py-5 px-3 max-h-[520px] h-full duration-200 rounded-[20px]">
+              <div className="bg-[#2F353F] impactTab w-full hover:bg-[#3A424E] justify-between sm:flex-col flex-row-reverse flex text-white py-5 px-3 max-h-[520px] sm:h-full duration-200 rounded-[20px]">
                 <div className="w-full flex justify-center items-center">
                   <img src={frieght} width="250px" />
                 </div>
@@ -57,7 +57,7 @@ export default function ImpactTab() {
                   </div>
                 </div>
               </div>
-              <div className="bg-[#2F353F] w-full hover:bg-[#3A424E] justify-between sm:flex-col flex-row-reverse flex text-white py-5 px-3 max-h-[520px] h-full duration-200 rounded-[20px]">
+              <div className="bg-[#2F353F] impactTab w-full hover:bg-[#3A424E] justify-between sm:flex-col flex-row-reverse flex text-white py-5 px-3 max-h-[520px] sm:h-full duration-200 rounded-[20px]">
                 <div className="w-full flex justify-center items-center">
                   <img src={partner} width="250px" />
                 </div>
@@ -73,7 +73,7 @@ export default function ImpactTab() {
                   </div>
                 </div>
               </div>
-              <div className="bg-[#2F353F] w-full hover:bg-[#3A424E] justify-between sm:flex-col flex-row-reverse flex text-white py-5 px-3 max-h-[520px] h-full duration-200 rounded-[20px]">
+              <div className="bg-[#2F353F] impactTab w-full hover:bg-[#3A424E] justify-between sm:flex-col flex-row-reverse flex text-white py-5 px-3 max-h-[520px] sm:h-full duration-200 rounded-[20px]">
                 <div className="w-full flex justify-center items-center">
                   <img src={career} width="250px" />
                 </div>

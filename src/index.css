@@ -178,7 +178,7 @@ nav li:hover{
 
 .auto-grid{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
 }
 
@@ -188,3 +188,18 @@ nav li:hover{
   background-color: teal;
   border-radius: 30px;
 }
+
+.flex-fit{
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 530px){
+  .impactTab{
+    flex-direction: column;
+  }
+}
+
