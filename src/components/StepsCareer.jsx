@@ -24,8 +24,8 @@ export default function StepsCareer() {
         <div className="flex gap-4 sm:flex-row flex-col items-center justify-end">
           <div className="sm:translate-y-5">
             <div className="flex flex-col gap-3 group bg-[#F7F8F7] w-full max-w-[300px] p-4 rounded-[30px]">
-              <h3 className="text-[22px] duration-300 group-hover:text-[#a8e92f]">Step 1: Apply</h3>
-              <p className=" group-hover:text-[#000] duration-300">
+              <h3 className="text-[20px] duration-300 group-hover:text-[#a8e92f] font-medium">Step 1: Apply</h3>
+              <p className=" group-hover:text-[#000] text-[#323942b0] duration-300">
                 Just find a role that interests you and send in you application.
                 Our positions remain open until we find the right candidate.
               </p>
@@ -33,10 +33,10 @@ export default function StepsCareer() {
           </div>
           <div className="flex flex-col gap-4">
             <div className="flex flex-col gap-3 group duration-300 bg-[#F7F8F7] w-full max-w-[300px] p-4 rounded-[30px]">
-              <h3 className=" group-hover:text-[#a8e92f]  duration-300text-[22px]">
+              <h3 className=" group-hover:text-[#a8e92f] duration-300 text-[20px] font-medium">
                 Step 2: Interviews and a home task
               </h3>
-              <p className="group-hover:text-[#000 duration-300]">
+              <p className="group-hover:text-[#000] text-[#323942b0] duration-300">
                 Every role is different but, typically you will be asked to
                 complete a home task. Next you will have interviews with the
                 recruiter, hiring manager and other team members before we make
@@ -44,8 +44,8 @@ export default function StepsCareer() {
               </p>
             </div>
             <div className="flex flex-col gap-3 group bg-[#F7F8F7] w-full max-w-[300px] p-4 rounded-[30px]">
-              <h3 className="text-[22px] group-hover:text-[#a8e92f] duration-300">Step 1: Decision</h3>
-              <p className=" group-hover:text-[#000] duration-300">
+              <h3 className="text-[20px] font-medium group-hover:text-[#a8e92f] duration-300">Step 3: Decision</h3>
+              <p className=" group-hover:text-[#000] text-[#323942b0] duration-300">
                 If its a great fit for you and us, we would invite you to join
                 the team.
               </p>
