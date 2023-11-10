@@ -21,7 +21,7 @@ export default function Career({ setActiveNav }) {
             style={style}
             className="bg-cover relative py-10 md:px-10 px-4 bg-left-top min-h-[55vh] duration-500 w-full md:h-[85vh] h-[55vh] rounded-[50px] flex justify-start items-end"
           >
-            <h1 className="md:text-[70px] text-white text-[55px] font-semibold">
+            <h1 className="md:text-[4rem] text-white text-[2rem] font-semibold">
              Let`s make gas available for <span className="text-[#a8e92f]">people, not Stations</span>
             </h1>
           </div>

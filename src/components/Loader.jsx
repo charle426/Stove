@@ -18,7 +18,7 @@ export default function Loader() {
     setInterval(() => {
       setRender(prev => prev + 1)
     }, 2000);
-  } console.log(ready);
+  } 
 
    
   return (
