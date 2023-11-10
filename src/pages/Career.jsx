@@ -6,6 +6,7 @@ import AccelerateCareer from "../components/accelerateCareer";
 import JobsAvailable from "../components/jobsAvailable";
 import Cities from "../components/cities"
 import CareerLeading from "../components/careerLeading";
+import CareerWhyWeAreHere from "../components/CareerWhyWeAreHere";
 export default function Career({ setActiveNav }) {
 
      setActiveNav("career")
@@ -27,7 +28,8 @@ export default function Career({ setActiveNav }) {
         </section>
         <Cities />
         <CareerLeading/>
-        <CareerServices/>
+        <CareerServices />
+        <CareerWhyWeAreHere/>
         <AccelerateCareer />
         <TeamCareer/>
         <StepsCareer/>
