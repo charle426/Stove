@@ -1,3 +1,4 @@
+import BlogComponent from "../components/blogComponent";
 import Cities from "../components/cities";
 import Fair from "../components/fair";
 import HeroDownloadApp from "../components/heroDownloadApp";
@@ -21,6 +22,7 @@ export default function Homepage({ setActiveNav }) {
             <HeroDownloadApp />
             <HomeServices/>
             <StickWithUS/>
+            <BlogComponent/>
         </>
         
     )
