@@ -180,6 +180,7 @@ nav li:hover{
   gap: 20px;
   align-items: start;
   justify-content: start;
+  width: 100%;
 }
 .auto-grid3{
   display: grid;

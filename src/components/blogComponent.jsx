@@ -68,7 +68,7 @@ export default function BlogComponent() {
             </div>
           }
         >
-          <div className="auto-grid  py-10 px-2 md:px-10">
+          <div className="auto-grid py-10 px-2 md:px-10">
             {server.length > 0 ? data: <p>there are no blogs at this time</p>}{" "}
           </div>
         </Suspense>

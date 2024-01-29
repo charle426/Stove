@@ -8,11 +8,11 @@ export default function HomeMobility() {
          backgroundImage: `linear-gradient(to right, #000000b8 30%, transparent), url(${mobi})`,
        };
     return (
-      <section className="sm:px-5 py-5 px-2">
-        <div className="bg-[#272B33] rounded-[50px] md:p-5 px-3 py-5">
+      <section className="sm:px-5 py-5 px-0">
+        <div className="bg-[#272B33] rounded-none sm:rounded-[50px] md:p-5 px-3 py-5">
           <div
             style={style}
-            className="px-5 mb-2 rounded-[50px] py-5 flex flex-col justify-end items-start md:min-h-[55vh] max-h-[45vh] bg-cover h-[75vh]"
+            className="sm:px-5 px-3 mb-2 rounded-[20px] sm:rounded-[50px] py-5 flex flex-col justify-end items-start md:min-h-[55vh] max-h-[45vh] bg-cover h-[75vh]"
           >
             <div className="rounded-lg py-2 px-3 bg-white mb-1">services</div>
             <h1 className="md:text-[50px] text-[40px] text-white">
