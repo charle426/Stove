@@ -73,6 +73,7 @@ export default function AdminLogin({ setAdminAuth }) {
               type="password"
               name="password"
               onChange={handleChange}
+              autoComplete
               value={login.password}
               className="outline-none rounded-[10px] px-2 py-3 max-w-[400px] bg-white border border-[#323942] focus:border-[#a8e92f]  invalid:border-red-500 w-full"
               ref={passwordRef}
