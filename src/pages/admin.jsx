@@ -5,8 +5,17 @@ import { db, storage } from "../firebaseConfig"
 import { doc, deleteDoc, } from "firebase/firestore";
 import {getDownloadURL, ref, uploadBytes} from "firebase/storage"
 import { v4 } from "uuid";
+import {useNavigate} from "react-router-dom"
 
-export default function Admin() {
+export default function Admin({ adminAuth }) {
+  const navigate = useNavigate()
+  React.useEffect(() => {
+    if (!adminAuth)
+      {
+        navigate("/blog/admin/login");
+      }
+  }, [])
+ 
   const blogsCollection = collection(db, "blogs");
 
   const [adminForm, setAdminForm] = React.useState({
@@ -25,14 +34,15 @@ export default function Admin() {
   const [popUp, setPopUp] = React.useState(false);
 
   React.useEffect(() => {
-      const fetchPostedBlogs = async () => {
-    const data = await getDocs(blogsCollection)
-     return setPostedBlogs(data.docs.map((doc) => ({ ...doc.data(), id: doc.id})))
-  };
+    const fetchPostedBlogs = async () => {
+      const data = await getDocs(blogsCollection);
+      return setPostedBlogs(
+        data.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
+      );
+    };
 
-     fetchPostedBlogs();
-   }, []);
- 
+    fetchPostedBlogs();
+  }, []);
 
   // console.log(postedBlogs);
   const data = postedBlogs.map((items, index) => {
@@ -75,7 +85,7 @@ export default function Admin() {
         <div className="flex gap-2 items-center justify-center">
           <Link to={`/blog/admin/edit/${items.id}`}>
             <div className="bg-blue-400 px-3 rounded-[3px] font-medium text-[18px] py-[2px]">
-              Edit
+              Edit 
             </div>
           </Link>
           <div
@@ -99,13 +109,16 @@ export default function Admin() {
     return setPopUp(true);
   }
 
- async function deleteAndReset(e) {
+  async function deleteAndReset(e) {
     const deleteId = e.currentTarget.id;
-    await deleteDoc(doc(db, "events", deleteId));
-    setPopUp(false);
-    setTimeout(() => {
-      window.location.reload();
-    }, 2500);
+    deleteDoc(doc(db, "blogs", deleteId))
+      .then(() => {
+        setPopUp(false);
+        // setTimeout(() => {
+        //   // window.location.reload();
+        // }, 2500);
+      })
+      .catch((err) => console.log(err));
   }
 
   function DeleteBlog() {
@@ -129,13 +142,13 @@ export default function Admin() {
           <div className="flex items-center gap-2 sm:flex-nowrap flex-wrap">
             <div
               id={deleteInfo.id}
-              className="bg-red-500 px-3 rounded-[3px] font-medium text-[18px] py-[2px]"
+              className="bg-red-500 px-3 rounded-[3px] cursor-pointer font-medium text-[18px] py-[2px]"
               onClick={deleteAndReset}
             >
               Yes, delete
             </div>
             <div
-              className="bg-blue-400 px-3 rounded-[3px] font-medium text-[18px] py-[2px]"
+              className="bg-blue-400 px-3 rounded-[3px] cursor-pointer font-medium text-[18px] py-[2px]"
               onClick={() => setPopUp(false)}
             >
               Cancel
@@ -158,42 +171,40 @@ export default function Admin() {
 
   // form submit
 
-    function handleFileChange(e) {
-      const imgRef = ref(storage, `/images/file${v4()}`);
-      uploadBytes(imgRef, e.target.files[0])
-        .then((data) => {
-          getDownloadURL(data.ref).then((url) => setFile(url));
-        })
-        .catch((err) => console.log(err));
-    }
+  function handleFileChange(e) {
+    const imgRef = ref(storage, `/images/file${v4()}`);
+    uploadBytes(imgRef, e.target.files[0])
+      .then((data) => {
+        getDownloadURL(data.ref).then((url) => setFile(url));
+      })
+      .catch((err) => console.log(err));
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const { title, desc } = adminForm;
-    if (!title || !desc ) return alert("Please fill form properly");
+    if (!title || !desc) return alert("Please fill form properly");
 
     const formData = {
       title,
       content: desc,
       file,
-      uploadTime: Date.now()
-    }
+      uploadTime: Date.now(),
+    };
 
-    await addDoc(blogsCollection, formData).then(() => {
+    await addDoc(blogsCollection, formData)
+      .then(() => {
         setAdminForm({
           title: "",
           desc: "",
-        })
-       setTimeout(() => {
-        window.location.reload();
-      }, 2500);
-    }).catch(err => console.log(err))
-
-  
-     
+        });
+        setTimeout(() => {
+          window.location.reload();
+        }, 2500);
+      })
+      .catch((err) => console.log(err));
   };
 
- 
   return (
     <section className="px-5 md:px-10 py-7">
       <div className="flex justify-between items-center">

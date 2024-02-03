@@ -19,9 +19,10 @@ import Blog from "./pages/blog";
 import Admin from "./pages/admin";
 import Articles from "./pages/Articles";
 import Edit from "./pages/Edit";
+import AdminLogin from "./pages/adminLogin";
 export default function App() {
   const [active, setActive] = React.useState("home");
-
+  const [adminAuth, setAdminAuth] = React.useState(false)
   return (
     <>
       <Loader />
@@ -52,7 +53,7 @@ export default function App() {
           <Route path="/blog" element={<Blog setActiveNav={setActive} />} />
           <Route
             path="/blog/stove/admin/234813649"
-            element={<Admin setActiveNav={setActive} />}
+            element={<Admin adminAuth={adminAuth} />}
           />
           <Route
             path="/blog/:id"
@@ -62,6 +63,11 @@ export default function App() {
           <Route
             path="/blog/admin/edit/:id"
             element={<Edit />}
+            errorElement={ErrorPage}
+          />
+          <Route
+            path="/blog/admin/login"
+            element={<AdminLogin setAdminAuth={setAdminAuth} />}
             errorElement={ErrorPage}
           />
         </Routes>

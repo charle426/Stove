@@ -1,6 +1,5 @@
 import { Suspense, useEffect, useState } from "react"
 import { Link } from "react-router-dom";
-import axios from "axios";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../firebaseConfig";
 export default function BlogComponent() {
@@ -57,9 +56,9 @@ export default function BlogComponent() {
     );
   });
     return (
-        <section className="flex flex-col gap-4 mt-5">
+        <section className="flex flex-col gap-4 mt-5 py-10 px-2 md:px-10">
         <div>
-          <h1 className="md:text-[4rem] text-[2.5rem] pt-10 px-2 md:px-10 font-semibold">News and Updates on </h1>
+          <h1 className="md:text-[4rem] text-[2.5rem] pt-10 font-semibold">News and Updates on </h1>
         </div>
         <Suspense
           fallback={
@@ -68,11 +67,14 @@ export default function BlogComponent() {
             </div>
           }
         >
-          <div className="auto-grid py-10 px-2 md:px-10">
-            {server.length > 0 ? data: <p>there are no blogs at this time</p>}{" "}
+          <div className="auto-grid">
+            {server.length > 0 ? data: <p>there are no blogs at this time</p>}
           </div>
         </Suspense>
-        {/* {server.length &&} */}
+        <div className="flex justify-end">
+               {server.length && <Link to="/blog" className="text-blue-500 hover:text-black" >see all blogs</Link>}
+        </div>
+   
       </section>
     );
 }
